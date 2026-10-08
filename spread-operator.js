@@ -48,12 +48,39 @@
 
 // console.log(profile.education[0].name);
 
-const hobbies = { name: "Roni", age: 30 };
+// const hobbies = { name: "Roni", age: 30 };
 
-const hobbiesObj1 = Object.keys(hobbies);
-const hobbiesObj2 = Object.values(hobbies);
+// const hobbiesObj1 = Object.keys(hobbies);
+// const hobbiesObj2 = Object.values(hobbies);
 
-const hby = [...hobbiesObj1, ...hobbiesObj2];
-console.log(hobbiesObj1);
-console.log(hobbiesObj2);
-console.log(hby);
+// const hby = [...hobbiesObj1, ...hobbiesObj2];
+// console.log(hobbiesObj1);
+// console.log(hobbiesObj2);
+// console.log(hby);
+
+// Desctructuring Nested
+const users = {
+  name: "Rifai",
+  age: 25,
+  address: {
+    province: "Jawa Tengah",
+    city: "Demak",
+  },
+  data: [
+    "test anjay",
+    {
+      nik: "12345678",
+      status: "Sudah kawin",
+    },
+  ],
+};
+const {
+  data,
+  data: [test, { nik }],
+} = users;
+const { city } = users.address;
+
+console.log(city);
+console.log(test);
+console.log(nik);
+console.log(data);
